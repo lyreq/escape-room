@@ -181,7 +181,8 @@ Sample Result:
     }
 
 ## 7. DELETE /bookings/{id}:	
-This service cancel a specific booking by its ID. In order to use this service, there must be an authorization key in the header.
+This service cancel a specific booking by its ID. In order to use this service, there must be an authorization key in the header. 
+
 
 Sample Result: 
 

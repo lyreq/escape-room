@@ -58,7 +58,7 @@ Do not forget to set the url and token information in the variables section of t
 	    Email: user@user.com
 	    Password: password
 
-## 1. POST /getToken
+## 1. POST /api/getToken
 As a result of this service, authorization key is returned. In all other services, you should use the key returned from this service in the header as authorization. Otherwise, you will get an error in your requests.
 
 Sample Request (JSON):
@@ -77,7 +77,7 @@ Sample Result:
     "data":  "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2VhMTE5NDg2NDQ1MTM1ZDkwN2U1N2YxY2IzYWE3MDFlMzQ5MmRjZDIyZDRjMDMzM2VmZmY1ZmQ1MzYzYjNlZmViZmJkZjVkZDdlMjA2ZTEiLCJpYXQiOjE2ODI2MTE3ODQuMDEzODc5LCJuYmYiOjE2ODI2MTE3ODQuMDEzODgxLCJleHAiOjE3MTQyMzQxODMuNjI0ODgzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.K82Mrb9cMcgKUzQPxTEi_GEf3Cph6rd_iZikYtILdqsxmmaa_8O1zxtUJdMiScHR1w0gVm07Rp1nEEhxqbRQ8YMqFi0z16w-PfEgoK6-vhiPuPQoQhPYsQ4V_ZYikI4Xl8peuo6s1LLexzKW20UETLh02bBzzWLeuxhrAugAF11uYU5e7a1AlM_C29qr5rzF2CtqHwqlvCDjJYIdeifOtTj9x8Ja_0IWcruuQ-9fyHkkDdSsQUnzu3es21E_8V7aEoq0E2l3Vc1h2QfwFAlCFp9h6To-OQBM0c2wRMbbHQ0EL8v-XZY5DCsmIoMCDU3IZ5HQ0F5yD_sqS4ZUdRLaTnGnZYtrDhtlAA618YB0xygvAV_bZ73_tBVf1Tx63LFv5Evwy8r660EHje9hK3EcZ3jXAxY8eQTbLgfBplIgpW-94ymNTgEcq0h7-OFCeKq29ctCaxIZbUqUJPtEGU8-V_fro5nmPzjghXmSxpm2_3Qa1edkdBaG_cvXETy2bc1p4KkNYNjxTEmC13DPfTi_t907-RxqRZSY7yJWdqDTTqBkgunlIWvQtB0-kSTa7LTmlbkB1miYRosPUx7vlW0WpKchOEyJJJBsOzt0h1qyJmdB08nPtxRftSnaqXDcAOxFtyCE9Jw3cr1OwFiwp7UKxJWUGwdaRJbcdL_OV5vFt0Q"
     }
 
-## 2. GET /escape-rooms:
+## 2. GET /api/escape-rooms:
 This service lists all escape rooms. In order to use this service, there must be an authorization key in the header.
 
 Sample Result:
@@ -98,7 +98,7 @@ Sample Result:
         ]
     }
 
-## 3. GET /escape-rooms/{id}:
+## 3. GET /api/escape-rooms/{id}:
 This service id gives the information of the escape room that was sent.  In order to use this service, there must be an authorization key in the header.
 
 Sample Result:
@@ -118,7 +118,7 @@ Sample Result:
             }
         ]
     }
-## 4. GET /escape-rooms/{id}/time-slots: 
+## 4. GET /api/escape-rooms/{id}/time-slots: 
 This service lists the available time slots for a particular escape room. In order to use this service, there must be an authorization key in the header.
 Sample Result:
 
@@ -136,7 +136,7 @@ Sample Result:
         }
     }
 
-## 5. POST /bookings: 
+## 5. POST /api/bookings: 
 This service create a new booking for a specific escape room and time slot. If the booking is made on the user's birthday, apply a 10% discount automatically. In order to use this service, there must be an authorization key in the header.
 
 Sample Request (JSON):
@@ -165,7 +165,7 @@ Sample Result:
         }
     }
 
-## 6. GET /bookings: 
+## 6. GET /api/bookings: 
 This service lists all reservations for the authenticated user and shows any discounts applied. In order to use this service, there must be an authorization key in the header.
 
 Sample Result:
@@ -188,7 +188,7 @@ Sample Result:
         ]
     }
 
-## 7. DELETE /bookings/{id}:	
+## 7. DELETE /api/bookings/{id}:	
 This service cancel a specific booking by its ID. In order to use this service, there must be an authorization key in the header. 
 
 

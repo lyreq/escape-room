@@ -57,6 +57,7 @@ Do not forget to set the url and token information in the variables section of t
 
 ## 1. POST /getToken
 As a result of this service, authorization key is returned. In all other services, you should use the key returned from this service in the header as authorization. Otherwise, you will get an error in your requests.
+
 Sample Request (JSON):
 
     {

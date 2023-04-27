@@ -3,6 +3,7 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
@@ -38,15 +39,20 @@ I used Laravel's passport library. I took the member email and password informat
 6) Generate a sample token with Passport
 
 		php  artisan  passport:install
+
+	Note: Sometimes this code doesn't work from latest laravel version. If it doesn't work, you can try this.
+	
+	    composer require laravel/passport --with-all-dependencies 
+
 7) Let's start the project
 
 		php artisan serve
 
 
-## Use of Services in the Project
+## ## Use of Services in the Project
 ####	
-You can find the postman collection of all services in the project [here](https://lunar-meteor-375744.postman.co/workspace/Escape-Room~0d38aeeb-6118-4071-999e-897813b0aca8/collection/18685427-2f1bebec-735d-4c21-b706-d6b24a0d31ef?action=share&creator=18685427)
-If you run the seed build, your default login will be as follows.
+You can find the postman collection of all services in the project [here](https://lunar-meteor-375744.postman.co/workspace/Escape-Room~0d38aeeb-6118-4071-999e-897813b0aca8/collection/18685427-2f1bebec-735d-4c21-b706-d6b24a0d31ef?action=share&creator=18685427).
+ If you run the seed build, your default login will be as follows.
 
 	    Email: user@user.com
 	    Password: password

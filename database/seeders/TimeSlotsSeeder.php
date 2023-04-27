@@ -13,6 +13,6 @@ class TimeSlotsSeeder extends Seeder
      */
     public function run(): void
     {
-       TimeSlots::factory(1)->create();
+       TimeSlots::factory(100)->create();
     }
 }

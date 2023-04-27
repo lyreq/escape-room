@@ -11,7 +11,6 @@ class CreateEscapeRoomsTable extends Migration
         Schema::create('escape_rooms', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('theme');
             $table->integer('max_participants');
             $table->timestamps();
         });

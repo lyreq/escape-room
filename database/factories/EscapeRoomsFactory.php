@@ -18,7 +18,6 @@ class EscapeRoomsFactory extends Factory
     {
         return [
             'name' => fake()->text(20),
-            'theme' => fake()->word(),
             'max_participants' => mt_rand(1,10)
         ];
     }

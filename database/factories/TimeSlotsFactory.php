@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\EscapeRooms;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,9 +18,9 @@ class TimeSlotsFactory extends Factory
     public function definition(): array
     {
         return [
-            'start_time' => '2023-05-01 10:00:00',
-            'end_time' => '2023-05-01 11:00:00',
-            'escape_room_id' => 1
+            'start_time' => fake()->dateTime(),
+            'end_time' => fake()->dateTime(),
+            'escape_room_id' => mt_rand(1,EscapeRooms::count())
         ];
     }
 }

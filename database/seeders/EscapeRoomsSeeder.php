@@ -13,6 +13,6 @@ class EscapeRoomsSeeder extends Seeder
      */
     public function run(): void
     {
-        EscapeRooms::factory(1)->create();
+        EscapeRooms::factory(10)->create();
     }
 }

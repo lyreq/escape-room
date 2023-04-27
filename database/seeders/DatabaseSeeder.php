@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
             UsersSeeder::class,
             EscapeRoomsSeeder::class,
             TimeSlotsSeeder::class,
-            BookingsSeeder::class,
+            // BookingsSeeder::class,
             
         ]);
     }

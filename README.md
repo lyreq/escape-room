@@ -57,6 +57,12 @@ Do not forget to set the url and token information in the variables section of t
 
 ## 1. POST /getToken
 As a result of this service, authorization key is returned. In all other services, you should use the key returned from this service in the header as authorization. Otherwise, you will get an error in your requests.
+Sample Request (JSON):
+
+    {
+    "email":"user@user.com",
+    "password":  "password"
+    }
 
 Sample Result:
 
@@ -128,6 +134,14 @@ Sample Result:
 
 ## 5. POST /bookings: 
 This service create a new booking for a specific escape room and time slot. If the booking is made on the user's birthday, apply a 10% discount automatically. In order to use this service, there must be an authorization key in the header.
+
+Sample Request (JSON):
+
+    {
+    "escape_room_id":  6,
+    "time_slot_id":  1,
+    "num_participants":  1
+    }
 
 Sample Result:
 

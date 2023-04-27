@@ -44,7 +44,7 @@ I used Laravel's passport library. I took the member email and password informat
 		php artisan serve
 
 
-## Projede Servislerin Kullanımı
+## Use of Services in the Project
 ####	
 You can find the postman collection of all services in the project [here](https://lunar-meteor-375744.postman.co/workspace/Escape-Room~0d38aeeb-6118-4071-999e-897813b0aca8/collection/18685427-2f1bebec-735d-4c21-b706-d6b24a0d31ef?action=share&creator=18685427)
 If you run the seed build, your default login will be as follows.

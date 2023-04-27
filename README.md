@@ -40,10 +40,6 @@ I used Laravel's passport library. I took the member email and password informat
 
 		php  artisan  passport:install
 
-	Note: Sometimes this code doesn't work from latest laravel version. If it doesn't work, you can try this.
-	
-	    composer require laravel/passport --with-all-dependencies 
-
 7) Let's start the project
 
 		php artisan serve

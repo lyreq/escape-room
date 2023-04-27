@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Api\BookingController;
+use App\Http\Controllers\Api\EscapeRoomController;
+use App\Http\Controllers\Api\TimeSlotController;
+use App\Http\Controllers\Api\TokenController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +18,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post("getToken", [TokenController::class, 'getToken'])->name("getToken");
+
+Route::middleware("auth:api")->group(function () {
+
+    Route::get('/escape-rooms', [EscapeRoomController::class, 'index']);//
+    Route::get('/escape-rooms/{id}', [EscapeRoomController::class, 'show']);//
+    Route::get('/escape-rooms/{id}/time-slots', [TimeSlotController::class, 'index']);//
+
+    Route::post('/bookings', [BookingController::class, "store"]);
+    Route::get('/bookings', [BookingController::class, "index"]);
+    Route::get('/bookings/{id}', [BookingController::class, "show"]);
+    Route::delete('/bookings/{id}', [BookingController::class, "destroy"]);
+
 });

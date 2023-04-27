@@ -12,7 +12,7 @@ class CreateBookingsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('time_slot_id');
-            $table->escape_room_id('time_slot_id');
+            $table->unsignedBigInteger('escape_room_id');
             $table->integer('num_participants');
             $table->double('discount_applied')->default(0);
             $table->timestamps();

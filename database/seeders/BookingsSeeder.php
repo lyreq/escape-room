@@ -13,11 +13,6 @@ class BookingsSeeder extends Seeder
      */
     public function run(): void
     {
-        Bookings::create([
-            'user_id' => 1,
-            'time_slot_id' => 1,
-            'num_participants' => 4,
-            'discount_applied' => 0
-        ]);
+       Bookings::factory(1)->create();
     }
 }

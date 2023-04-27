@@ -13,16 +13,6 @@ class EscapeRoomsSeeder extends Seeder
      */
     public function run(): void
     {
-        EscapeRooms::create([
-            'name' => 'The Haunted Mansion',
-            'theme' => 'Horror',
-            'max_participants' => 6
-        ]);
-
-        EscapeRooms::create([
-            'name' => 'The Lost Treasure',
-            'theme' => 'Adventure',
-            'max_participants' => 4
-        ]);
+        EscapeRooms::factory(1)->create();
     }
 }

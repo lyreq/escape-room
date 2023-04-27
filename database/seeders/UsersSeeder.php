@@ -14,12 +14,6 @@ class UsersSeeder extends Seeder
      */
     public function run(): void
     {
-        $user = new User();
-        $user->name = "Admin";
-        $user->email = "admin@admin.com";
-        $user->password = Hash::make("demoadmin");
-        $user->date_of_birth = Carbon::now();
-        $user->email_verified_at = Carbon::now();
-        $user->save();
+        User::factory(1)->create();
     }
 }

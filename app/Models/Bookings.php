@@ -10,4 +10,5 @@ class Bookings extends Model
 {
     use HasFactory, HasApiTokens;
     protected $fillable = ["user_id", "escape_room_id", "time_slot_id", "num_participants", "discount_applied"];
+    public $timestamps = true;
 }

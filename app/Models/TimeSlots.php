@@ -9,4 +9,6 @@ use Laravel\Passport\HasApiTokens;
 class TimeSlots extends Model
 {
     use HasFactory,HasApiTokens;
+    protected $fillable = ["start_time","end_time","escape_room_id"];
+    public $timestamps = true;
 }

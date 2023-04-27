@@ -43,6 +43,9 @@ I used Laravel's passport library. I took the member email and password informat
 7) Let's start the project
 
 		php artisan serve
+8) If you want, you can do all the testing.
+
+	    php artisan test
 
 
 ## ## Use of Services in the Project
@@ -146,15 +149,20 @@ Sample Request (JSON):
 
 Sample Result:
 
-    {
-        "escape_room_id": 1,
-        "time_slot_id": 1,
-        "num_participants": 1,
-        "user_id": 1,
-        "discount_applied": 0.1,
-        "updated_at": "2023-04-27T16:33:41.000000Z",
-        "created_at": "2023-04-27T16:33:41.000000Z",
-        "id": 3
+       {
+        "status": "success",
+        "code": 200,
+        "message": "Transaction Successful!",
+        "data": {
+            "escape_room_id": 6,
+            "time_slot_id": 1,
+            "num_participants": 1,
+            "user_id": 1,
+            "discount_applied": 0.1,
+            "updated_at": "2023-04-27T21:29:58.000000Z",
+            "created_at": "2023-04-27T21:29:58.000000Z",
+            "id": 5
+        }
     }
 
 ## 6. GET /bookings: 

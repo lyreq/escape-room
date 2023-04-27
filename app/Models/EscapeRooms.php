@@ -9,4 +9,6 @@ use Laravel\Passport\HasApiTokens;
 class EscapeRooms extends Model
 {
     use HasFactory,HasApiTokens;
+    protected $fillable = ["name","max_participants"];
+    public $timestamps = true;
 }

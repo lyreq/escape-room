@@ -38,6 +38,19 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <label for="date_of_birth" class="col-md-4 col-form-label text-md-end">{{ __('Birth Day') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="date_of_birth" type="date" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" value="{{ old('date_of_birth') }}" required>
+
+                                @error('date_of_birth')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
